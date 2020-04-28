@@ -1,0 +1,13 @@
+
+<textarea [(ngModel)]="importtext"></textarea>
+
+<button (click)="import()">Import</button>
+
+<div *ngIf='deck'>
+    <ul>
+        <li class="text" *ngFor="let card of deck.cards">
+            <img [src]="card.image">
+        </li>
+    </ul>
+</div>
+

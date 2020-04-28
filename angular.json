@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mtg-socket": {
+    "mtg-firebase": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,12 +12,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "mtg",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mtg-socket",
+            "outputPath": "dist/mtg-firebase",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mtg-socket:build"
+            "browserTarget": "mtg-firebase:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mtg-socket:build:production"
+              "browserTarget": "mtg-firebase:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mtg-socket:build"
+            "browserTarget": "mtg-firebase:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mtg-socket:serve"
+            "devServerTarget": "mtg-firebase:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mtg-socket:serve:production"
+              "devServerTarget": "mtg-firebase:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "mtg-socket"
+  "defaultProject": "mtg-firebase"
 }
